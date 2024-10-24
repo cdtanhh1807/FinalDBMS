@@ -30,6 +30,10 @@ namespace Final_project.DAO
                     {
                         ap.Fill(dataTable);
                         dataGridView.DataSource = dataTable;
+                        dataGridView.Columns["ConsignmentID"].HeaderText = "ID";
+                        dataGridView.Columns["Reception"].HeaderText = "Nơi Nhận";
+                        dataGridView.Columns["Remittance"].HeaderText = "Nơi Gửi";
+                        dataGridView.Columns["CreatedAt"].HeaderText = "Ngày Tạo";
                     }
                 }
             } 

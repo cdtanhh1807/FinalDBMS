@@ -13,7 +13,7 @@ namespace Final_project.SqlConection
 
        // string strCon = "Data Source=DELL\\MAITMY;Initial Catalog=Phone_1;Integrated Security=True;Encrypt=False";
 
-        string strCon = @"Data Source=DESKTOP-O1GT1JO\SQLEXPRESS;Initial Catalog=DBMSFinal;Integrated Security=True";
+        string strCon = @"Data Source=DELL\MAITMY;Initial Catalog=DBMSFinal;Integrated Security=True;Encrypt=False";
 
 
         public SqlConnection Connect()

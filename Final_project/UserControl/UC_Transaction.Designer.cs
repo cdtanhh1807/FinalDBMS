@@ -34,35 +34,42 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearchName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvExport = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgvIncom = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnSubmit = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel2.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lvConsignmentImportDetail = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.dgvExport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncom)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2Panel2
+            // btnSubmit
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.LightGray;
-            this.guna2Panel2.Controls.Add(this.btnSubmit);
-            this.guna2Panel2.Controls.Add(this.txtSearchName);
-            this.guna2Panel2.Controls.Add(this.label2);
-            this.guna2Panel2.Controls.Add(this.label1);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel2.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(306, 717);
-            this.guna2Panel2.TabIndex = 14;
+            this.btnSubmit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSubmit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSubmit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSubmit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnSubmit.Location = new System.Drawing.Point(837, 9);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(160, 49);
+            this.btnSubmit.TabIndex = 5;
+            this.btnSubmit.Text = "Tìm kiếm";
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // txtSearchName
             // 
@@ -78,48 +85,24 @@
             this.txtSearchName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchName.ForeColor = System.Drawing.Color.Black;
             this.txtSearchName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchName.Location = new System.Drawing.Point(21, 75);
-            this.txtSearchName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtSearchName.Location = new System.Drawing.Point(1018, 9);
+            this.txtSearchName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtSearchName.Name = "txtSearchName";
             this.txtSearchName.PasswordChar = '\0';
             this.txtSearchName.PlaceholderText = "Nhập thông tin tìm kiếm";
             this.txtSearchName.SelectedText = "";
-            this.txtSearchName.Size = new System.Drawing.Size(281, 40);
+            this.txtSearchName.Size = new System.Drawing.Size(375, 49);
             this.txtSearchName.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(219)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(18, 19);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(194, 41);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Tìm kiếm";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(293, 178);
-            this.label1.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(219)))));
-            this.label3.Location = new System.Drawing.Point(307, 28);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(4, 8);
             this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.label3.Size = new System.Drawing.Size(264, 41);
+            this.label3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.label3.Size = new System.Drawing.Size(352, 50);
             this.label3.TabIndex = 16;
             this.label3.Text = "Danh sách giao dịch";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,11 +111,11 @@
             // 
             this.dgvExport.AllowUserToAddRows = false;
             this.dgvExport.AllowUserToDeleteRows = false;
-            this.dgvExport.AllowUserToOrderColumns = true;
             this.dgvExport.AllowUserToResizeColumns = false;
             this.dgvExport.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvExport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvExport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,11 +135,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvExport.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvExport.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvExport.Location = new System.Drawing.Point(311, 152);
+            this.dgvExport.Location = new System.Drawing.Point(23, 161);
+            this.dgvExport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvExport.MultiSelect = false;
             this.dgvExport.Name = "dgvExport";
             this.dgvExport.RowHeadersVisible = false;
-            this.dgvExport.Size = new System.Drawing.Size(717, 205);
+            this.dgvExport.RowHeadersWidth = 51;
+            this.dgvExport.Size = new System.Drawing.Size(657, 252);
             this.dgvExport.TabIndex = 17;
             this.dgvExport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvExport.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -179,16 +164,17 @@
             this.dgvExport.ThemeStyle.RowsStyle.Height = 22;
             this.dgvExport.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvExport.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvExport.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExport_CellClick);
             // 
             // dgvIncom
             // 
             this.dgvIncom.AllowUserToAddRows = false;
             this.dgvIncom.AllowUserToDeleteRows = false;
-            this.dgvIncom.AllowUserToOrderColumns = true;
             this.dgvIncom.AllowUserToResizeColumns = false;
             this.dgvIncom.AllowUserToResizeRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dgvIncom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvIncom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,10 +194,12 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvIncom.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvIncom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvIncom.Location = new System.Drawing.Point(311, 424);
+            this.dgvIncom.Location = new System.Drawing.Point(715, 161);
+            this.dgvIncom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvIncom.Name = "dgvIncom";
             this.dgvIncom.RowHeadersVisible = false;
-            this.dgvIncom.Size = new System.Drawing.Size(717, 205);
+            this.dgvIncom.RowHeadersWidth = 51;
+            this.dgvIncom.Size = new System.Drawing.Size(657, 252);
             this.dgvIncom.TabIndex = 18;
             this.dgvIncom.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvIncom.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -234,17 +222,17 @@
             this.dgvIncom.ThemeStyle.RowsStyle.Height = 22;
             this.dgvIncom.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvIncom.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvIncom.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIncom_CellClick);
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(219)))));
-            this.label4.Location = new System.Drawing.Point(307, 108);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(18, 107);
             this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(145, 41);
+            this.label4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.label4.Size = new System.Drawing.Size(193, 50);
             this.label4.TabIndex = 19;
             this.label4.Text = "Xuất Kho";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,46 +242,108 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(219)))));
-            this.label5.Location = new System.Drawing.Point(307, 371);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(710, 107);
             this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.label5.Size = new System.Drawing.Size(145, 41);
+            this.label5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.label5.Size = new System.Drawing.Size(193, 50);
             this.label5.TabIndex = 20;
             this.label5.Text = "Nhập Kho";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnSubmit
+            // label1
             // 
-            this.btnSubmit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSubmit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSubmit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSubmit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(182, 143);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(120, 45);
-            this.btnSubmit.TabIndex = 5;
-            this.btnSubmit.Text = "Tìm kiếm";
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(219)))));
+            this.label1.Location = new System.Drawing.Point(18, 437);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.label1.Size = new System.Drawing.Size(247, 50);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Chi tiết hàng hóa";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lvConsignmentImportDetail
+            // 
+            this.lvConsignmentImportDetail.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.lvConsignmentImportDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvConsignmentImportDetail.FullRowSelect = true;
+            this.lvConsignmentImportDetail.GridLines = true;
+            this.lvConsignmentImportDetail.HideSelection = false;
+            this.lvConsignmentImportDetail.Location = new System.Drawing.Point(23, 491);
+            this.lvConsignmentImportDetail.Margin = new System.Windows.Forms.Padding(4);
+            this.lvConsignmentImportDetail.Name = "lvConsignmentImportDetail";
+            this.lvConsignmentImportDetail.Size = new System.Drawing.Size(1349, 352);
+            this.lvConsignmentImportDetail.TabIndex = 33;
+            this.lvConsignmentImportDetail.UseCompatibleStateImageBehavior = false;
+            this.lvConsignmentImportDetail.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "IMEI";
+            this.columnHeader1.Width = 120;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "HÃNG";
+            this.columnHeader2.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "DÒNG";
+            this.columnHeader3.Width = 130;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "TÊN";
+            this.columnHeader4.Width = 170;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "ROM";
+            this.columnHeader5.Width = 148;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "RAM";
+            this.columnHeader6.Width = 189;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "MÀU";
+            this.columnHeader7.Width = 176;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "TÌNH TRẠNG";
+            this.columnHeader8.Width = 312;
             // 
             // UC_Transaction
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lvConsignmentImportDetail);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtSearchName);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgvIncom);
             this.Controls.Add(this.dgvExport);
-            this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_Transaction";
-            this.Size = new System.Drawing.Size(1048, 717);
+            this.Size = new System.Drawing.Size(1397, 882);
             this.Load += new System.EventHandler(this.UC_Transaction_Load);
-            this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvExport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncom)).EndInit();
             this.ResumeLayout(false);
@@ -301,16 +351,22 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2DataGridView dgvExport;
         private Guna.UI2.WinForms.Guna2DataGridView dgvIncom;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button btnSubmit;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView lvConsignmentImportDetail;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }

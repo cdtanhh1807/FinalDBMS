@@ -131,6 +131,10 @@ namespace Final_project.DAO
                     dgvEmployees.Columns["visible"].Visible = false;
 
                 }
+                dgvEmployees.Columns["Name"].HeaderText = "Tên Nhân Viên";
+                dgvEmployees.Columns["DateOfBirth"].HeaderText = "Năm Sinh";
+                dgvEmployees.Columns["Address"].HeaderText = "Địa chỉ";
+                dgvEmployees.Columns["PhoneNumber"].HeaderText = "Số điện thoại";
 
             }
 
