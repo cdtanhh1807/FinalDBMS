@@ -56,7 +56,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Account.cs" />
-
     <Compile Include="Class\Employee.cs" />
     <Compile Include="Class\Owner.cs" />
     <Compile Include="Class\Transaction.cs" />
@@ -68,20 +67,12 @@
     <Compile Include="FAddEmployee.Designer.cs">
       <DependentUpon>FAddEmployee.cs</DependentUpon>
     </Compile>
-
-    <Compile Include="FAddConsignment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FAddConsignment.Designer.cs">
-      <DependentUpon>FAddConsignment.cs</DependentUpon>
-    </Compile>
     <Compile Include="FAddPhone.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FAddPhone.Designer.cs">
       <DependentUpon>FAddPhone.cs</DependentUpon>
     </Compile>
-
     <Compile Include="FHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,9 +87,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
     <Compile Include="SqlConnection\Connection.cs" />
-
     <Compile Include="UserControl\UC_Employee.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -129,13 +118,8 @@
     <Compile Include="UserControl\UC_Transaction.Designer.cs">
       <DependentUpon>UC_Transaction.cs</DependentUpon>
     </Compile>
-
     <EmbeddedResource Include="FAddEmployee.resx">
       <DependentUpon>FAddEmployee.cs</DependentUpon>
-	</EmbeddedResource>
-
-    <EmbeddedResource Include="FAddConsignment.resx">
-      <DependentUpon>FAddConsignment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FAddPhone.resx">
       <DependentUpon>FAddPhone.cs</DependentUpon>

@@ -15,52 +15,84 @@ namespace Final_project.UserControl
     public partial class UC_Import : System.Windows.Forms.UserControl
     {
         Connection conn = new Connection();
+
+        private int maxOpenCount;
+        private int openCount = 0;
+        private string consignmentCode;
+
+        bool check = false;
+
         public UC_Import()
         {
             InitializeComponent();
         }
 
-        private void UC_Import_Load(object sender, EventArgs e)
+        private void OpenAddPhoneForm()
         {
-            lvConsignmentImport.Items.Clear();
-            using (SqlCommand cmd = new SqlCommand("select * from dbo.LoadInforConsignment() order by ConsignmentID desc", conn.Connect()))
+            if (openCount < maxOpenCount)
             {
-               SqlDataReader reader = cmd.ExecuteReader();
+                FAddPhone fAddPhone = new FAddPhone(consignmentCode);
+                fAddPhone.StartPosition = FormStartPosition.CenterScreen;
+                fAddPhone.FormClosed += NewForm_FormClosed;
 
-                while (reader.Read())
-                {
-                    string consignmentID = reader.GetString(0);
-                    string remittance = reader.GetString(1);
-                    string phoneQuantity = reader.GetInt32(2).ToString();
-                    string importDate = reader.GetDateTime(3).ToString("dd-MM-yyyy");
-                    string importer = reader.GetString(4).ToString();
-
-                    ListViewItem item = new ListViewItem(consignmentID);
-                    item.SubItems.Add(remittance);
-                    item.SubItems.Add(phoneQuantity);
-                    item.SubItems.Add(importDate);
-                    item.SubItems.Add(importer);
-
-                    lvConsignmentImport.Items.Add(item);
-                }
-
-                reader.Close();
+                fAddPhone.Show();
+                openCount++;
+                
             }
         }
 
-        private void lvConsignmentImport_SelectedIndexChanged(object sender, EventArgs e)
+        private void UC_Import_Load(object sender, EventArgs e)
         {
-            lvConsignmentImportDetail.Items.Clear();
             
-            if (lvConsignmentImport.SelectedItems.Count > 0 )
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            try
             {
-                ListViewItem items = lvConsignmentImport.SelectedItems[0];
+                if (int.TryParse(txtQuantity.Text, out maxOpenCount) && maxOpenCount > 0)
+                {
+                    using (SqlCommand cmd = new SqlCommand("dbo.AddConsignment", conn.Connect()))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-                string consigmentID = items.SubItems[0].Text;
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            consignmentCode = reader.GetString(0);
+                        }
+                    }
 
+                    using (SqlCommand cmd = new SqlCommand("dbo.SaveTransaction", conn.Connect()))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("@Reception", SqlDbType.NVarChar, 255)).Value = "Kho";
+                        cmd.Parameters.Add(new SqlParameter("@Remittance", SqlDbType.NVarChar, 255)).Value = txtRemittance.Text;
+                        cmd.Parameters.Add(new SqlParameter("@ConsignmentID", SqlDbType.VarChar, 50)).Value = consignmentCode;
+                        cmd.Parameters.Add(new SqlParameter("@AccountID", SqlDbType.Int)).Value = 1;
+
+                        cmd.ExecuteNonQuery();
+                    };
+                    OpenAddPhoneForm();
+
+                    btnConfirm.Enabled = false;
+                    
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LoadAll()
+        {
+            if (check == true)
+            {
                 using (SqlCommand cmd = new SqlCommand("select * from dbo.ConsignmentDetail(@ConsigmentID)", conn.Connect()))
                 {
-                    cmd.Parameters.AddWithValue("@ConsigmentID", consigmentID);
+                    cmd.Parameters.AddWithValue("@ConsigmentID", consignmentCode);
 
                     SqlDataReader reader = cmd.ExecuteReader();
 
@@ -90,21 +122,18 @@ namespace Final_project.UserControl
 
                     reader.Close();
                 }
-
             }
         }
-        
 
-        private void btnAddConsignment_Click(object sender, EventArgs e)
+        private void NewForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            FAddConsignment frm = new FAddConsignment();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
-        }
+            if (openCount == maxOpenCount)
+            {
+                check = true;
+                LoadAll();
+            }
 
-        private void UC_Import_Click(object sender, EventArgs e)
-        {
-            UC_Import_Load(sender, e);
+            OpenAddPhoneForm();   
         }
     }
 }
